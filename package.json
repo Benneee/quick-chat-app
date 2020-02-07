@@ -1,0 +1,29 @@
+{
+  "name": "quick-chat-app",
+  "version": "1.0.0",
+  "description": "A chat app to understand the basics of socket.io using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://benneee:TUpgu9ytT2j2CWL@github.com/Benneee/quick-chat-app.git"
+  },
+  "keywords": [
+    "socket.io",
+    "chat",
+    "app",
+    "chat-app",
+    "node.js"
+  ],
+  "author": "Benedict Nkeonye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benneee/quick-chat-app/issues"
+  },
+  "homepage": "https://github.com/Benneee/quick-chat-app#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
