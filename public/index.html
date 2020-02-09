@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <style>
       * {
         margin: 0;
@@ -45,29 +48,22 @@
     <title>Quick Chat</title>
   </head>
   <body>
+    <h3 id="welcometext"></h3>
+
     <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+
+    <form id="chatForm">
+      <input
+        id="m"
+        name="chatMessage"
+        autocomplete="off"
+        placeholder="Enter message here..."
+      />
+      <button type="submit">Send</button>
     </form>
 
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
-    <script>
-      $(function() {
-        const socket = io();
-        $("form").submit(function(e) {
-          e.preventDefault();
-          socket.emit("chat message", $("#m").val());
-          $("#m").val("");
-          return false;
-        });
-
-        socket.on("chat message", function(msg) {
-          $("#messages").append($("<li>").text(msg));
-            console.log('msg: ', msg);
-            window.scrollTo(0, document.body.scrollHeight);
-        });
-      });
-    </script>
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="./js/chat.js"></script>
   </body>
 </html>
