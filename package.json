@@ -4,7 +4,8 @@
   "description": "A chat app to understand the basics of socket.io using Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
   "dependencies": {
     "express": "^4.15.2",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
